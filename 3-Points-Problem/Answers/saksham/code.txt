@@ -1,0 +1,42 @@
+#define in 8
+#define out 7
+int in=0,out=0;
+void IN()
+{
+    ++in;
+    delay(1000);
+}
+
+void OUT()
+{
+  	++out;
+    delay(1000);
+}
+void setup()
+{
+  delay(2000);
+  pinMode(in, INPUT);
+  pinMode(out, INPUT);
+}
+
+void loop()
+{  
+  
+  if(digitalRead(in))
+  IN();
+  if(digitalRead(out))
+  OUT();
+  
+  if(count<=0)
+  {
+// no one is in room
+    delay(200);
+  }
+  
+  else
+
+{ // count of people in room is in - out
+printf("people inside room is %d:",in-out);
+}
+  
+}
